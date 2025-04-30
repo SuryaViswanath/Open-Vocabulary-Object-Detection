@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YOLO World Inference</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (20%) -->
+        <div class="sidebar">
+            <h2>Model Selection</h2>
+            <form id="model-form">
+                <label><input type="radio" name="model" value="yolov8s" checked> YOLOv8s</label><br>
+                <label><input type="radio" name="model" value="yolov8m"> YOLOv8m</label><br>
+                <label><input type="radio" name="model" value="yolov8x"> YOLOv8x</label><br>
+                <!-- <label><input type="radio" name="model" value="yolo-world"> YOLO-World</label> -->
+            </form>
+        </div>
+
+        <!-- Main Content (80%) -->
+        <div class="main">
+            <!-- Top section (70%) -->
+            <div class="top-section">
+                <div class="image-panel">
+                    <h3>Upload Image</h3>
+                    <input type="file" id="image-input" accept="image/*">
+                </div>
+                <div class="image-panel">
+                    <h3>Output Image</h3>
+                    <img id="result-image" src="" alt="Result will appear here" />
+                </div>
+            </div>
+
+            <!-- Bottom section (30%) -->
+            <div class="bottom-section">
+                <textarea id="text-input" placeholder="Enter a prompt or label..."></textarea>
+                <button onclick="sendRequest()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
